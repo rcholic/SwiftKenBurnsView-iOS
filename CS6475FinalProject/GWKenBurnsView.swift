@@ -13,6 +13,10 @@
  
  1. http://stackoverflow.com/questions/25127700/two-dimensional-array-in-swift
  
+ 
+ =============
+ port open cv2 into iOS: https://github.com/foundry/OpenCVSwiftStitch/tree/master/SwiftStitch
+ 
  */
 
 

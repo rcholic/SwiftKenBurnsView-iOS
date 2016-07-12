@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		751517871D355DA100963999 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515177B1D355D9000963999 /* GPUImage.framework */; };
 		751517881D355DA500963999 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751517841D355D9A00963999 /* Surge.framework */; };
+		751517941D355FE200963999 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 751517931D355FE200963999 /* CVWrapper.mm */; };
+		751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 751517961D35607E00963999 /* UIImage+OpenCV.mm */; };
+		7515179B1D3560EB00963999 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7515179A1D3560EB00963999 /* UIImage+Rotate.m */; };
+		7515179D1D35614C00963999 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515179C1D35614C00963999 /* opencv2.framework */; };
+		751517A61D35620A00963999 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 751517A41D35620A00963999 /* stitching.cpp */; };
+		D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */; };
 		EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */; };
 		EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBEF1D347BD20000C6BC /* ViewController.swift */; };
 		EB6BDBF31D347BD30000C6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6BDBF11D347BD30000C6BC /* Main.storyboard */; };
@@ -69,6 +75,20 @@
 /* Begin PBXFileReference section */
 		751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "external/GPUImage2/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
 		7515177E1D355D9A00963999 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = external/Surge/Surge.xcodeproj; sourceTree = "<group>"; };
+		751517921D355FE200963999 /* CS6475FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS6475FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		751517931D355FE200963999 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
+		751517951D35602F00963999 /* CVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
+		751517961D35607E00963999 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		751517981D3560A300963999 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		751517991D3560C900963999 /* UIImage+Rotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		7515179A1D3560EB00963999 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		7515179C1D35614C00963999 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Pods/OpenCV/opencv2.framework; sourceTree = "<group>"; };
+		751517A11D3561D000963999 /* stitching.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stitching.h; sourceTree = "<group>"; };
+		751517A41D35620A00963999 /* stitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stitching.cpp; sourceTree = "<group>"; };
+		751517A51D35620A00963999 /* stitching.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stitching.hpp; sourceTree = "<group>"; };
+		751517A71D35649000963999 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS6475FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6BDBEA1D347BD20000C6BC /* CS6475FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS6475FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6BDBEF1D347BD20000C6BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +105,7 @@
 		EB6BDC271D347D030000C6BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EB6BDC291D347D080000C6BC /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		EB6BDC361D3484F70000C6BC /* GWKenBurnsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWKenBurnsView.swift; sourceTree = "<group>"; };
+		FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +113,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7515179D1D35614C00963999 /* opencv2.framework in Frameworks */,
 				751517881D355DA500963999 /* Surge.framework in Frameworks */,
 				751517871D355DA100963999 /* GPUImage.framework in Frameworks */,
 				EB6BDC2A1D347D080000C6BC /* AVKit.framework in Frameworks */,
 				EB6BDC281D347D030000C6BC /* AVFoundation.framework in Frameworks */,
+				D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +157,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7515178D1D355FB700963999 /* OpenCVWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				751517931D355FE200963999 /* CVWrapper.mm */,
+				751517951D35602F00963999 /* CVWrapper.h */,
+				751517961D35607E00963999 /* UIImage+OpenCV.mm */,
+				751517981D3560A300963999 /* UIImage+OpenCV.h */,
+				751517991D3560C900963999 /* UIImage+Rotate.h */,
+				7515179A1D3560EB00963999 /* UIImage+Rotate.m */,
+				751517A11D3561D000963999 /* stitching.h */,
+				751517A41D35620A00963999 /* stitching.cpp */,
+				751517A51D35620A00963999 /* stitching.hpp */,
+			);
+			name = OpenCVWrapper;
+			sourceTree = "<group>";
+		};
+		7AB459DA821461CB5A2F5CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				751517A71D35649000963999 /* libc++.tbd */,
+				7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA90F9EF528D9F39DDDE1D23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */,
+				FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EB6BDBE11D347BD20000C6BC = {
 			isa = PBXGroup;
 			children = (
@@ -141,10 +198,13 @@
 				EB6BDC011D347BD30000C6BC /* CS6475FinalProjectTests */,
 				EB6BDC0C1D347BD30000C6BC /* CS6475FinalProjectUITests */,
 				EB6BDBEB1D347BD20000C6BC /* Products */,
+				7515179C1D35614C00963999 /* opencv2.framework */,
 				751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */,
 				7515177E1D355D9A00963999 /* Surge.xcodeproj */,
 				EB6BDC271D347D030000C6BC /* AVFoundation.framework */,
 				EB6BDC291D347D080000C6BC /* AVKit.framework */,
+				DA90F9EF528D9F39DDDE1D23 /* Pods */,
+				7AB459DA821461CB5A2F5CC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +221,8 @@
 		EB6BDBEC1D347BD20000C6BC /* CS6475FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				751517921D355FE200963999 /* CS6475FinalProject-Bridging-Header.h */,
+				7515178D1D355FB700963999 /* OpenCVWrapper */,
 				EB6BDC351D3484D20000C6BC /* Model */,
 				EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */,
 				EB6BDBEF1D347BD20000C6BC /* ViewController.swift */,
@@ -205,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB6BDC121D347BD30000C6BC /* Build configuration list for PBXNativeTarget "CS6475FinalProject" */;
 			buildPhases = (
+				21B2942EF851D93F1479F4DA /* Check Pods Manifest.lock */,
 				EB6BDBE61D347BD20000C6BC /* Sources */,
 				EB6BDBE71D347BD20000C6BC /* Frameworks */,
 				EB6BDBE81D347BD20000C6BC /* Resources */,
+				7E83A317EE3523368DAD56BE /* Embed Pods Frameworks */,
+				36D04C1E9E0C5ACEF9844EC9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,14 +433,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21B2942EF851D93F1479F4DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36D04C1E9E0C5ACEF9844EC9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E83A317EE3523368DAD56BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB6BDBE61D347BD20000C6BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751517941D355FE200963999 /* CVWrapper.mm in Sources */,
+				751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */,
+				7515179B1D3560EB00963999 /* UIImage+Rotate.m in Sources */,
 				EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */,
 				EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */,
 				EB6BDC371D3484F70000C6BC /* GWKenBurnsView.swift in Sources */,
+				751517A61D35620A00963999 /* stitching.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,23 +634,38 @@
 		};
 		EB6BDC131D347BD30000C6BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/OpenCV",
+				);
 				INFOPLIST_FILE = CS6475FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iparroting.CS6475FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CS6475FinalProject/CS6475FinalProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EB6BDC141D347BD30000C6BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/OpenCV",
+				);
 				INFOPLIST_FILE = CS6475FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iparroting.CS6475FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CS6475FinalProject/CS6475FinalProject-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1,0 +1,6 @@
+framework module Pods_CS6475FinalProject {
+  umbrella header "Pods-CS6475FinalProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
