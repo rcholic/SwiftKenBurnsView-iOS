@@ -1,0 +1,6 @@
+[submodule "Surge"]
+	path = Surge
+	url = https://github.com/mattt/Surge.git
+[submodule "GPUImage2"]
+	path = GPUImage2
+	url = https://github.com/BradLarson/GPUImage2.git
