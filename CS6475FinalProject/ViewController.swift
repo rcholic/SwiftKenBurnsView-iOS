@@ -19,11 +19,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var selectedImage: UIImage? = nil
     
     let imagePickerController = UIImagePickerController()
+//    let popoverController = UIPopoverPresentationController(presentedViewController: self(), presentingViewController: self())
+    
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.modalPresentationStyle = UIModalPresentationStyle.FullScreen
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         setupUI()
@@ -32,6 +36,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func chooseImage(sender: AnyObject) {
         presentViewController(sourceActionSheet, animated: true, completion: nil)
+        
+    //    popoverController.presentPopoverFromRect(self.view.bounds, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Up, animated: true)
         // presentImagePickerOfType(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
