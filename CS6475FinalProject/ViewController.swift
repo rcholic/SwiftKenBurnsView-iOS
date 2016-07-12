@@ -35,10 +35,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func chooseImage(sender: AnyObject) {
-        presentViewController(sourceActionSheet, animated: true, completion: nil)
+    //    presentViewController(sourceActionSheet, animated: true, completion: nil)
         
     //    popoverController.presentPopoverFromRect(self.view.bounds, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Up, animated: true)
-        // presentImagePickerOfType(UIImagePickerControllerSourceType.PhotoLibrary)
+        presentImagePickerOfType(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
     @IBAction func applyFilter1(sender: AnyObject) {
