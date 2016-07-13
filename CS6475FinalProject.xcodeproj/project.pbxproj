@@ -15,6 +15,11 @@
 		7515179D1D35614C00963999 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515179C1D35614C00963999 /* opencv2.framework */; };
 		751517A61D35620A00963999 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 751517A41D35620A00963999 /* stitching.cpp */; };
 		D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */; };
+		EB68699C1D35D255008B6DA7 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB68699B1D35D255008B6DA7 /* image2.jpg */; };
+		EB68699E1D35D25E008B6DA7 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB68699D1D35D25E008B6DA7 /* image3.jpg */; };
+		EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */; };
+		EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */; };
+		EB6869A51D35D7CA008B6DA7 /* GWStillImageMotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */; };
 		EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */; };
 		EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBEF1D347BD20000C6BC /* ViewController.swift */; };
 		EB6BDBF31D347BD30000C6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6BDBF11D347BD30000C6BC /* Main.storyboard */; };
@@ -89,6 +94,12 @@
 		751517A71D35649000963999 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS6475FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		EB68699B1D35D255008B6DA7 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		EB68699D1D35D25E008B6DA7 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenBurnViewController.swift; sourceTree = "<group>"; };
+		EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWStillImageMotionView.swift; sourceTree = "<group>"; };
+		EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GWStillImageMotionView.xib; sourceTree = "<group>"; };
+		EB6869A81D35E029008B6DA7 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = "../../../../../../Users/guoliangwang/Library/Developer/Xcode/DerivedData/CS6475FinalProject-aenwplnqbetskcgysojbcgxnlfbq/Build/Products/Debug-iphonesimulator/Neon.framework"; sourceTree = "<group>"; };
 		EB6BDBEA1D347BD20000C6BC /* CS6475FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS6475FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6BDBEF1D347BD20000C6BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +187,7 @@
 		7AB459DA821461CB5A2F5CC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB6869A81D35E029008B6DA7 /* Neon.framework */,
 				751517A71D35649000963999 /* libc++.tbd */,
 				7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */,
 			);
@@ -189,6 +201,24 @@
 				FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB6869961D35D236008B6DA7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EB68699B1D35D255008B6DA7 /* image2.jpg */,
+				EB68699D1D35D25E008B6DA7 /* image3.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		EB6869A11D35D784008B6DA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */,
+				EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		EB6BDBE11D347BD20000C6BC = {
@@ -221,6 +251,8 @@
 		EB6BDBEC1D347BD20000C6BC /* CS6475FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				EB6869A11D35D784008B6DA7 /* View */,
+				EB6869961D35D236008B6DA7 /* images */,
 				751517921D355FE200963999 /* CS6475FinalProject-Bridging-Header.h */,
 				7515178D1D355FB700963999 /* OpenCVWrapper */,
 				EB6BDC351D3484D20000C6BC /* Model */,
@@ -230,6 +262,7 @@
 				EB6BDBF41D347BD30000C6BC /* Assets.xcassets */,
 				EB6BDBF61D347BD30000C6BC /* LaunchScreen.storyboard */,
 				EB6BDBF91D347BD30000C6BC /* Info.plist */,
+				EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */,
 			);
 			path = CS6475FinalProject;
 			sourceTree = "<group>";
@@ -412,8 +445,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6BDBF81D347BD30000C6BC /* LaunchScreen.storyboard in Resources */,
+				EB68699E1D35D25E008B6DA7 /* image3.jpg in Resources */,
 				EB6BDBF51D347BD30000C6BC /* Assets.xcassets in Resources */,
+				EB68699C1D35D255008B6DA7 /* image2.jpg in Resources */,
 				EB6BDBF31D347BD30000C6BC /* Main.storyboard in Resources */,
+				EB6869A51D35D7CA008B6DA7 /* GWStillImageMotionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +523,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				751517941D355FE200963999 /* CVWrapper.mm in Sources */,
+				EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */,
 				751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */,
+				EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */,
 				7515179B1D3560EB00963999 /* UIImage+Rotate.m in Sources */,
 				EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */,
 				EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */,
