@@ -18,25 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-T0-Qaf">
-                                <rect key="frame" x="192" y="28" width="216" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Mx-Buy">
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-T0-Qaf">
+                                <rect key="frame" x="192" y="20" width="246" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-1P-RO0">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <state key="normal" title="Images"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="Load Image"/>
                                         <connections>
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uX9-O4-aOh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udl-iZ-WHj">
-                                        <rect key="frame" x="90" y="0.0" width="42" height="30"/>
+                                        <rect key="frame" x="120" y="0.0" width="42" height="30"/>
                                         <state key="normal" title="Filter1"/>
                                         <connections>
                                             <action selector="applyFilter1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pad-bP-hbd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt6-aN-xoF">
-                                        <rect key="frame" x="172" y="0.0" width="44" height="30"/>
+                                        <rect key="frame" x="202" y="0.0" width="44" height="30"/>
                                         <state key="normal" title="Filter2"/>
                                         <connections>
                                             <action selector="applyFilter2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58X-H1-22J"/>
@@ -44,18 +47,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Mx-Buy">
-                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eRr-Mx-Buy" secondAttribute="bottom" id="CLv-Fc-pdn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eRr-Mx-Buy" secondAttribute="trailing" constant="-20" id="EFa-en-DFJ"/>
-                            <constraint firstItem="eRr-Mx-Buy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cPq-vv-ZgK"/>
-                            <constraint firstItem="eRr-Mx-Buy" firstAttribute="top" secondItem="bzN-T0-Qaf" secondAttribute="bottom" constant="14" id="nbJ-ZC-19c"/>
-                            <constraint firstItem="bzN-T0-Qaf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xtc-ay-ASK"/>
-                            <constraint firstItem="bzN-T0-Qaf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zjH-PM-uNE"/>
+                            <constraint firstItem="eRr-Mx-Buy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LSg-no-SIL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eRr-Mx-Buy" secondAttribute="bottom" id="ODd-j0-yaV"/>
+                            <constraint firstItem="bzN-T0-Qaf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SqO-sl-TZ3"/>
+                            <constraint firstItem="eRr-Mx-Buy" firstAttribute="top" secondItem="bzN-T0-Qaf" secondAttribute="bottom" constant="22" id="gCZ-7M-8mp"/>
+                            <constraint firstItem="bzN-T0-Qaf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geX-7f-QJ2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRr-Mx-Buy" secondAttribute="trailing" constant="-20" id="mcs-GU-n6K"/>
                         </constraints>
                     </view>
                     <connections>

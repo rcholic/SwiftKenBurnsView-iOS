@@ -17,5 +17,7 @@
 
 + (UIImage*) processWithArray:(NSArray*)imageArray;
 
++ (NSArray*) readImage:(UIImage*) inputImage;
+
 
 @end

@@ -1,6 +1,6 @@
-[submodule "external/GPUImage2"]
-	path = external/GPUImage2
-	url = https://github.com/BradLarson/GPUImage2.git
 [submodule "external/Surge"]
 	path = external/Surge
 	url = https://github.com/mattt/Surge.git
+[submodule "external/GPUImage2"]
+	path = external/GPUImage2
+	url = https://github.com/BradLarson/GPUImage2.git

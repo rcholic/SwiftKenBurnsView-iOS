@@ -23,6 +23,12 @@
     return result;
 }
 
++ (NSArray*) readImage: (UIImage*) inputImage
+{
+    NSArray* imageArray = [NSArray arrayWithObject:inputImage];
+    return imageArray;
+}
+
 + (UIImage*) processWithOpenCVImage1:(UIImage*)inputImage1 image2:(UIImage*)inputImage2;
 {
     NSArray* imageArray = [NSArray arrayWithObjects:inputImage1,inputImage2,nil];

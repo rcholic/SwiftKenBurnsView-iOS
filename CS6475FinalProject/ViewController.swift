@@ -15,20 +15,16 @@ typealias imageInfoObject = (pixels: [UInt8]?, width: Int, height: Int)
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var sourceActionSheet: UIAlertController!
     var selectedImage: UIImage? = nil
+    var images: [UIImage] = []
     
     let imagePickerController = UIImagePickerController()
-//    let popoverController = UIPopoverPresentationController(presentedViewController: self(), presentingViewController: self())
-    
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.modalPresentationStyle = UIModalPresentationStyle.FullScreen
-        
-        // Do any additional setup after loading the view, typically from a nib.
         
         setupUI()
         compute()
@@ -43,55 +39,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func applyFilter1(sender: AnyObject) {
         print("applying filter 1")
-        let imageInfo = pixelValuesFromImage(self.selectedImage)
-        // print("pixels: \(imageInfo.pixels)")
-        print("imageInfo.width and height: \(imageInfo.width), \(imageInfo.height)")
+//        let imageInfo = pixelValuesFromImage(self.selectedImage)
+//        // print("pixels: \(imageInfo.pixels)")
+//        print("imageInfo.width and height: \(imageInfo.width), \(imageInfo.height)")
+        // CVWrapper.processImageWithOpenCV(self.selectedImage)
+        let imageArr = CVWrapper.readImage(self.selectedImage)
+        
+        print("imageArr.size: \(imageArr.count), \(imageArr[0].count)")
     }
     
     @IBAction func applyFilter2(sender: AnyObject) {
         print("applying filter 2")
+        guard images.count >= 2 else { return }
+        
+        CVWrapper.processWithArray(images)
     }
     
     private func setupUI() {
         imagePickerController.delegate = self
-        
-        sourceActionSheet = UIAlertController(title: nil, message: NSLocalizedString("Choose Photo", comment: ""), preferredStyle: .ActionSheet)
-        
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.Cancel, handler: nil)
-        sourceActionSheet.addAction(cancelAction)
-        
-        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
-            let photoLibAction = UIAlertAction(title: NSLocalizedString("Photo Library", comment: ""), style: .Default, handler: { [weak self] _ in
-                self?.presentImagePickerOfType(UIImagePickerControllerSourceType.PhotoLibrary)
-                })
-            
-            sourceActionSheet.addAction(photoLibAction)
-        }
-        
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: ""), style: .Default, handler: { [weak self] _ in
-                self?.presentImagePickerOfType(UIImagePickerControllerSourceType.Camera)
-                })
-            
-            sourceActionSheet.addAction(cameraAction)
-        }
-        
-        if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
-            let photoAlbumAction = UIAlertAction(title: NSLocalizedString("Photo Albums", comment: ""), style: .Default, handler: { [weak self] _ in
-                self?.presentImagePickerOfType(UIImagePickerControllerSourceType.SavedPhotosAlbum)
-                })
-            sourceActionSheet.addAction(photoAlbumAction)
-        }
-        
-        if selectedImage != nil {
-            let clearPhotoOption = UIAlertAction(title: NSLocalizedString("Clear Photo", comment: ""), style: UIAlertActionStyle.Destructive, handler: { [weak self] _ in
-                self?.selectedImage = nil
-                })
-            
-            sourceActionSheet.addAction(clearPhotoOption)
-        }
-        
-        
     }
     
     private func presentImagePickerOfType(sourceType:UIImagePickerControllerSourceType) {
@@ -158,6 +123,7 @@ extension ViewController {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imageView.image = image
         selectedImage = image
+        images.append(image)
         print("image: \(image)")
         dismissViewControllerAnimated(true, completion: nil)
     }
