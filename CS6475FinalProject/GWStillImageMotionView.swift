@@ -83,21 +83,22 @@ import GPUImage
     }
     
     func startAnimation() {
+        guard self.pointsTapped.count > 0 else {
+            stopAnimation()
+            return
+        }
         isAnimationRunning = !isAnimationRunning
         if isAnimationRunning {
             print("starting animation now")
-//            guard self.pointsTapped.count == 0 else {
-//                stopAnimation()
-//                return
-//            }
+            
             performAnimation(0)
         }
     }
     
     func performAnimation(pointIndex: Int) {
         let rotationAngle = (arc4random() % 9) / 100
-        let zoomInX: CGFloat = 1.30
-        let zoomInY: CGFloat = 1.30
+        let zoomInX: CGFloat = 1.50
+        let zoomInY: CGFloat = 1.50
 
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
