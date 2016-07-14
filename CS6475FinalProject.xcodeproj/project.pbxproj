@@ -15,6 +15,10 @@
 		7515179D1D35614C00963999 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515179C1D35614C00963999 /* opencv2.framework */; };
 		751517A61D35620A00963999 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 751517A41D35620A00963999 /* stitching.cpp */; };
 		D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */; };
+		EB5E47201D36FE7C00D92E23 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */; };
+		EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47251D36FE8500D92E23 /* CoreVideo.framework */; };
+		EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */; };
+		EB5E472A1D36FE9800D92E23 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47291D36FE9800D92E23 /* QuartzCore.framework */; };
 		EB68699C1D35D255008B6DA7 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB68699B1D35D255008B6DA7 /* image2.jpg */; };
 		EB68699E1D35D25E008B6DA7 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB68699D1D35D25E008B6DA7 /* image3.jpg */; };
 		EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */; };
@@ -94,6 +98,10 @@
 		751517A71D35649000963999 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS6475FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EB5E47251D36FE8500D92E23 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EB5E47291D36FE9800D92E23 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EB68699B1D35D255008B6DA7 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		EB68699D1D35D25E008B6DA7 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
 		EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenBurnViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5E472A1D36FE9800D92E23 /* QuartzCore.framework in Frameworks */,
+				EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */,
+				EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */,
+				EB5E47201D36FE7C00D92E23 /* CoreMedia.framework in Frameworks */,
 				7515179D1D35614C00963999 /* opencv2.framework in Frameworks */,
 				751517881D355DA500963999 /* Surge.framework in Frameworks */,
 				751517871D355DA100963999 /* GPUImage.framework in Frameworks */,
@@ -187,6 +199,10 @@
 		7AB459DA821461CB5A2F5CC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB5E47291D36FE9800D92E23 /* QuartzCore.framework */,
+				EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */,
+				EB5E47251D36FE8500D92E23 /* CoreVideo.framework */,
+				EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */,
 				EB6869A81D35E029008B6DA7 /* Neon.framework */,
 				751517A71D35649000963999 /* libc++.tbd */,
 				7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */,

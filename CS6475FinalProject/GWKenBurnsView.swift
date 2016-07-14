@@ -13,6 +13,14 @@
  
  1. http://stackoverflow.com/questions/25127700/two-dimensional-array-in-swift
  
+ 2. Render image from matrix: 
+ https://hacking-ios.cocoagarage.com/uiimage-pixel-play-extension-in-swift-7c6fe90396b6#.lbavl2j6k
+ 
+ 3. Image to byte array/matrix:
+ http://stackoverflow.com/questions/29734059/convert-uiimage-to-byte-array-in-swift
+ 
+ 
+ 
  
  =============
  port open cv2 into iOS: https://github.com/foundry/OpenCVSwiftStitch/tree/master/SwiftStitch
