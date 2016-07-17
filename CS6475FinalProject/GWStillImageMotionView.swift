@@ -22,6 +22,10 @@ import GPUImage
     var isAnimationRunning: Bool = false
     let resizeFactor: CGFloat = 1.2 // make the loaded image bigger than its original size for scanning effect
     
+    var imagesArr: [UIImage?] = []
+    var curImageIndex = 0 // index in the imagesArr
+    var timer = NSTimer()
+    
     var curImage: UIImage? {
         didSet {
             // remove the previous view
@@ -99,6 +103,14 @@ import GPUImage
         }
     }
     
+    @objc private func nextImageView(sender: AnyObject?) {
+        guard let img = imagesArr[curImageIndex % imagesArr.count] else { return }
+        self.curImage = img
+        performAnimation(0)
+        print("animation return for curImageIndex: \(curImageIndex)")
+        curImageIndex += 1 // increment
+    }
+    
     func stopAnimation() {
         isAnimationRunning = false
         pointsTapped.removeAll()
@@ -106,16 +118,25 @@ import GPUImage
     }
     
     func startAnimation() {
-        guard self.pointsTapped.count > 0 && curImage != nil else {
+        guard self.pointsTapped.count > 0 && (curImage != nil || imagesArr.count == 0) else {
             stopAnimation()
             return
         }
         isAnimationRunning = !isAnimationRunning
+//        if isAnimationRunning {
+//            print("starting animation now")
+//            
+//            performAnimation(0)
+//        }
         if isAnimationRunning {
             print("starting animation now")
+            timer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: #selector(self.nextImageView(_:)), userInfo: nil, repeats: true)
             
-            performAnimation(0)
+//            performAnimation(0)
+        } else {
+            timer.invalidate() // cancel timer
         }
+        
     }
     
     func performAnimation(pointIndex: Int) {
@@ -130,7 +151,7 @@ import GPUImage
 
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
-        var moveX = curPoint.x - lastPoint.x
+        var moveX = -maxMoveXY.maxMoveX // curPoint.x - lastPoint.x
         let isXNegative = moveX.isNegative()
         moveX = abs(moveX) > maxMoveXY.maxMoveX ? maxMoveXY.maxMoveX : moveX  // prevent image overfloat
         
@@ -138,7 +159,7 @@ import GPUImage
             moveX = -moveX
         }
         
-        var moveY = curPoint.y - lastPoint.y
+        var moveY = -maxMoveXY.maxMoveY // curPoint.y - lastPoint.y
         let isYnegative = moveY.isNegative()
         moveY = abs(moveY) > maxMoveXY.maxMoveY ? maxMoveXY.maxMoveY : moveY // prevent image overfloat
         if isYnegative && !moveY.isNegative() {
@@ -158,17 +179,31 @@ import GPUImage
         let startXForm = CGAffineTransformIdentity
         // let finishXForm = CGAffineTransformIdentity
         
-        let possibleFinishes: [CGAffineTransform] = [zoomIn, rotateMove, allTransform] // zoomIn, rotateMove, allTransform
+        let possibleFinishes: [CGAffineTransform] = [zoomIn, allTransform] // zoomIn, rotateMove, allTransform
         let finishXForm = possibleFinishes[Int(arc4random_uniform(UInt32(possibleFinishes.count)))]
         
         imageView.transform = startXForm
-        UIView.animateWithDuration(2.0, animations: { 
+        /*
+        UIView.animateWithDuration(3.0, animations: {
             self.imageView.transform = finishXForm
             }) { _ in
                 
                 print("finished animation for point index: \(pointIndex)")
                 if pointIndex < self.pointsTapped.count-1 {
                     self.performAnimation(pointIndex+1)
+                }
+        }
+        */
+        
+        UIView.animateWithDuration(4, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.imageView.transform = finishXForm
+            }) { _ in
+                
+                print("finished animation for point index: \(pointIndex)")
+                if pointIndex < self.pointsTapped.count-1 {
+                    self.performAnimation(pointIndex+1)
+                } else {
+                    print("animation done with current image for all points")
                 }
         }
         
