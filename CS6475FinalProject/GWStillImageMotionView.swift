@@ -15,10 +15,40 @@ import GPUImage
     
 //    @IBOutlet weak var imageContainerView: UIImageView!
     var imageView: UIImageView!
+    var layerAnimation: CATransition?
     
     var imageArray: [UIImage] = []
     var pointsTapped: [CGPoint] = []
     var isAnimationRunning: Bool = false
+    let resizeFactor: CGFloat = 1.2 // make the loaded image bigger than its original size for scanning effect
+    
+    var curImage: UIImage? {
+        didSet {
+            // remove the previous view
+            if self.contentView.subviews.count > 0 {
+                let oldImageView = self.contentView.subviews[0] as! UIImageView
+                oldImageView.removeFromSuperview()
+            }
+            
+            imageView = UIImageView()
+            imageView.image = curImage
+            contentView.addSubview(imageView)
+            
+            let imageLayer = CALayer()
+            imageLayer.contents = curImage?.CGImage
+            imageLayer.anchorPoint = CGPointMake(0, 0)
+            let optimal = self.getImageAndMoveInfo()
+            imageLayer.bounds = CGRectMake(0, 0, optimal.optimumWidth, optimal.optimumHeight)
+            imageLayer.position = CGPointMake(0, 0)
+            
+            layerAnimation = CATransition()
+            layerAnimation!.duration = 1
+            layerAnimation!.type = kCATransitionFade
+            
+            imageLayer.addAnimation(layerAnimation!, forKey: nil)
+            imageView.layer.addSublayer(imageLayer)
+        }
+    }
     
     init(imageArray: [UIImage]) {
         super.init(frame: CGRectNull)
@@ -48,9 +78,8 @@ import GPUImage
         imageView = UIImageView()
         imageView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         imageView.contentMode = .ScaleToFill
-        imageView.image = UIImage(named: "image3.jpg")
-        
-       // imageContainerView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
+//        imageView.image = UIImage(named: "image3.jpg")
+
         self.addSubview(contentView)
         
         contentView.addSubview(imageView)
@@ -70,12 +99,6 @@ import GPUImage
         }
     }
     
-//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        let touch = touches.first
-//        let p = (touch?.locationInView(self))!
-//        print("touches ended!, point: \(p))")
-//    }
-    
     func stopAnimation() {
         isAnimationRunning = false
         pointsTapped.removeAll()
@@ -83,7 +106,7 @@ import GPUImage
     }
     
     func startAnimation() {
-        guard self.pointsTapped.count > 0 else {
+        guard self.pointsTapped.count > 0 && curImage != nil else {
             stopAnimation()
             return
         }
@@ -96,6 +119,11 @@ import GPUImage
     }
     
     func performAnimation(pointIndex: Int) {
+        guard curImage != nil else {
+            return
+        }
+        let maxMoveXY = getImageAndMoveInfo()
+        
         let rotationAngle = (arc4random() % 9) / 100
         let zoomInX: CGFloat = 1.50
         let zoomInY: CGFloat = 1.50
@@ -103,7 +131,20 @@ import GPUImage
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
         var moveX = curPoint.x - lastPoint.x
+        let isXNegative = moveX.isNegative()
+        moveX = abs(moveX) > maxMoveXY.maxMoveX ? maxMoveXY.maxMoveX : moveX  // prevent image overfloat
+        
+        if isXNegative && !moveX.isNegative() {
+            moveX = -moveX
+        }
+        
         var moveY = curPoint.y - lastPoint.y
+        let isYnegative = moveY.isNegative()
+        moveY = abs(moveY) > maxMoveXY.maxMoveY ? maxMoveXY.maxMoveY : moveY // prevent image overfloat
+        if isYnegative && !moveY.isNegative() {
+            moveY = -moveY
+        }
+        print("moveX: \(moveX),moveY: \(moveY); maxMoveX: \(maxMoveXY.maxMoveX), maxMoveY: \(maxMoveXY.maxMoveY)")
         
         // transformations:
         let rotate = CGAffineTransformMakeRotation(CGFloat(rotationAngle))
@@ -117,7 +158,7 @@ import GPUImage
         let startXForm = CGAffineTransformIdentity
         // let finishXForm = CGAffineTransformIdentity
         
-        let possibleFinishes: [CGAffineTransform] = [zoomIn, allTransform]
+        let possibleFinishes: [CGAffineTransform] = [zoomIn, rotateMove, allTransform] // zoomIn, rotateMove, allTransform
         let finishXForm = possibleFinishes[Int(arc4random_uniform(UInt32(possibleFinishes.count)))]
         
         imageView.transform = startXForm
@@ -131,7 +172,41 @@ import GPUImage
                 }
         }
         
+    } // performAnimation
+    
+    private func isLandscape() -> Bool {
+        return UIDevice.currentDevice().orientation == .LandscapeLeft || UIDevice.currentDevice().orientation == .LandscapeRight
     }
     
-    
+    /**
+     Get image and motion information
+     @ param maxMoveX: maximum distance the image can be translated along X axis
+     @ param maxMoveY: maximum distance the image can be translated along Y axis
+     @ params optimumWidth, and optimumHeight: the image resized for showing int he image view (resized bigger)
+     
+     - returns: Tuple with keys as indicated in the paranthesis
+     */
+    private func getImageAndMoveInfo() -> (maxMoveX: CGFloat, maxMoveY: CGFloat, optimumWidth: CGFloat, optimumHeight: CGFloat) {
+        let frameWid = isLandscape() ? self.bounds.size.width : self.bounds.size.height
+        let frameHgt = isLandscape() ? self.bounds.size.height : self.bounds.size.width
+        
+        let widthRatio = frameWid / (self.curImage?.size.width)!
+        let heightRatio = frameHgt / (self.curImage?.size.height)!
+        
+        let resizeRatio = widthRatio > heightRatio ? widthRatio : heightRatio
+        let width = curImage!.size.width * resizeRatio * resizeFactor
+        let height = curImage!.size.height * resizeRatio * resizeFactor
+        // imageView.frame = CGRectMake(<#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
+        
+        let maxMoveX: CGFloat = width - frameWid
+        let maxMoveY: CGFloat = height - frameHgt
+        
+        return (maxMoveX, maxMoveY, width, height)
+    }
+}
+
+extension CGFloat {
+    func isNegative() -> Bool {
+        return self < 0.0
+    }
 }

@@ -15,8 +15,7 @@ class KenBurnViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        gwKBenViewContainer.fillSuperview()
- //       gwKBenViewContainer.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        gwKBenViewContainer.curImage = UIImage(named: "image3.jpg") // change the image here!
     }
     
     @IBAction func toggleAnimation(sender: AnyObject) {

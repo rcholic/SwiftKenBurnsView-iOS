@@ -4,3 +4,6 @@
 [submodule "external/GPUImage2"]
 	path = external/GPUImage2
 	url = https://github.com/BradLarson/GPUImage2.git
+[submodule "external/Toucan"]
+	path = external/Toucan
+	url = https://github.com/gavinbunney/Toucan.git

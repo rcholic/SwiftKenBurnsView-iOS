@@ -15,6 +15,8 @@
 		7515179D1D35614C00963999 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515179C1D35614C00963999 /* opencv2.framework */; };
 		751517A61D35620A00963999 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 751517A41D35620A00963999 /* stitching.cpp */; };
 		D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */; };
+		EB27AFCB1D387E0000B39424 /* Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB27AFC61D387DE800B39424 /* Toucan.framework */; };
+		EB27AFCD1D387EA000B39424 /* PanZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */; };
 		EB5E47201D36FE7C00D92E23 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */; };
 		EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47251D36FE8500D92E23 /* CoreVideo.framework */; };
 		EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */; };
@@ -34,6 +36,7 @@
 		EB6BDC281D347D030000C6BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BDC271D347D030000C6BC /* AVFoundation.framework */; };
 		EB6BDC2A1D347D080000C6BC /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6BDC291D347D080000C6BC /* AVKit.framework */; };
 		EB6BDC371D3484F70000C6BC /* GWKenBurnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDC361D3484F70000C6BC /* GWKenBurnsView.swift */; };
+		EB764D621D3BFBEC003ABB83 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB764D611D3BFBEC003ABB83 /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
 			remoteInfo = SurgeTests;
+		};
+		EB27AFC51D387DE800B39424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 740AC3EA1999799900AB9A86;
+			remoteInfo = Toucan;
+		};
+		EB27AFC71D387DE800B39424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D770E41C2BF2C800B15C64;
+			remoteInfo = Toucan.tvOS;
+		};
+		EB27AFC91D387DE800B39424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 740AC3F51999799900AB9A86;
+			remoteInfo = ToucanTests;
 		};
 		EB6BDBFF1D347BD30000C6BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -98,6 +122,8 @@
 		751517A71D35649000963999 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS6475FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = external/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
+		EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanZoomViewController.swift; sourceTree = "<group>"; };
 		EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		EB5E47251D36FE8500D92E23 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -124,6 +150,7 @@
 		EB6BDC271D347D030000C6BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EB6BDC291D347D080000C6BC /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		EB6BDC361D3484F70000C6BC /* GWKenBurnsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWKenBurnsView.swift; sourceTree = "<group>"; };
+		EB764D611D3BFBEC003ABB83 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "../../../../../../Users/guoliangwang/Library/Developer/Xcode/DerivedData/CS6475FinalProject-aenwplnqbetskcgysojbcgxnlfbq/Build/Products/Debug-iphonesimulator/Kingfisher.framework"; sourceTree = "<group>"; };
 		FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB764D621D3BFBEC003ABB83 /* Kingfisher.framework in Frameworks */,
+				EB27AFCB1D387E0000B39424 /* Toucan.framework in Frameworks */,
 				EB5E472A1D36FE9800D92E23 /* QuartzCore.framework in Frameworks */,
 				EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */,
 				EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */,
@@ -199,6 +228,7 @@
 		7AB459DA821461CB5A2F5CC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB764D611D3BFBEC003ABB83 /* Kingfisher.framework */,
 				EB5E47291D36FE9800D92E23 /* QuartzCore.framework */,
 				EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */,
 				EB5E47251D36FE8500D92E23 /* CoreVideo.framework */,
@@ -217,6 +247,16 @@
 				FAD8B697BED65251AD23DC79 /* Pods-CS6475FinalProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB27AFBC1D387DE800B39424 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB27AFC61D387DE800B39424 /* Toucan.framework */,
+				EB27AFC81D387DE800B39424 /* Toucan.framework */,
+				EB27AFCA1D387DE800B39424 /* ToucanTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EB6869961D35D236008B6DA7 /* images */ = {
@@ -244,6 +284,7 @@
 				EB6BDC011D347BD30000C6BC /* CS6475FinalProjectTests */,
 				EB6BDC0C1D347BD30000C6BC /* CS6475FinalProjectUITests */,
 				EB6BDBEB1D347BD20000C6BC /* Products */,
+				EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */,
 				7515179C1D35614C00963999 /* opencv2.framework */,
 				751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */,
 				7515177E1D355D9A00963999 /* Surge.xcodeproj */,
@@ -279,6 +320,7 @@
 				EB6BDBF61D347BD30000C6BC /* LaunchScreen.storyboard */,
 				EB6BDBF91D347BD30000C6BC /* Info.plist */,
 				EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */,
+				EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */,
 			);
 			path = CS6475FinalProject;
 			sourceTree = "<group>";
@@ -414,6 +456,10 @@
 					ProductGroup = 7515177F1D355D9A00963999 /* Products */;
 					ProjectRef = 7515177E1D355D9A00963999 /* Surge.xcodeproj */;
 				},
+				{
+					ProductGroup = EB27AFBC1D387DE800B39424 /* Products */;
+					ProjectRef = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -451,6 +497,27 @@
 			fileType = wrapper.cfbundle;
 			path = SurgeTests.xctest;
 			remoteRef = 751517851D355D9A00963999 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB27AFC61D387DE800B39424 /* Toucan.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Toucan.framework;
+			remoteRef = EB27AFC51D387DE800B39424 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB27AFC81D387DE800B39424 /* Toucan.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Toucan.framework;
+			remoteRef = EB27AFC71D387DE800B39424 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB27AFCA1D387DE800B39424 /* ToucanTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ToucanTests.xctest;
+			remoteRef = EB27AFC91D387DE800B39424 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -539,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				751517941D355FE200963999 /* CVWrapper.mm in Sources */,
+				EB27AFCD1D387EA000B39424 /* PanZoomViewController.swift in Sources */,
 				EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */,
 				751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */,
 				EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */,

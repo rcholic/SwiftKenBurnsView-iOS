@@ -4,15 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "1FE46BDFF1E7471C03A5913CDB49722034B96464" : 0,
     "0A10A05FA17EF4CD5DD9E00FF750F0422B9488CE" : 0,
-    "9F65A476A58933AE6B22EAE730A194955F98FC66" : 0
+    "9F65A476A58933AE6B22EAE730A194955F98FC66" : 0,
+    "80ADD6617E2E5B252D87FAA27AAF85DB06DC7FEF" : 0,
+    "1FE46BDFF1E7471C03A5913CDB49722034B96464" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "076A5096-89DC-4529-B7B6-A8D118B2BF2A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "1FE46BDFF1E7471C03A5913CDB49722034B96464" : "SwiftKenBurnsView_CS6475Final\/",
     "0A10A05FA17EF4CD5DD9E00FF750F0422B9488CE" : "SwiftKenBurnsView_CS6475Final\/external\/GPUImage2\/",
-    "9F65A476A58933AE6B22EAE730A194955F98FC66" : "SwiftKenBurnsView_CS6475Final\/external\/Surge\/"
+    "9F65A476A58933AE6B22EAE730A194955F98FC66" : "SwiftKenBurnsView_CS6475Final\/external\/Surge\/",
+    "80ADD6617E2E5B252D87FAA27AAF85DB06DC7FEF" : "CS6475FinalProject\/external\/Toucan\/",
+    "1FE46BDFF1E7471C03A5913CDB49722034B96464" : "SwiftKenBurnsView_CS6475Final\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CS6475FinalProject",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -27,6 +29,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rcholic\/SwiftKenBurnsView_CS6475Final.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1FE46BDFF1E7471C03A5913CDB49722034B96464"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gavinbunney\/Toucan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80ADD6617E2E5B252D87FAA27AAF85DB06DC7FEF"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mattt\/Surge.git",

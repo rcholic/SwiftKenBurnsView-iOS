@@ -106,6 +106,50 @@
             </objects>
             <point key="canvasLocation" x="2536" y="331"/>
         </scene>
+        <!--Panning & Zooming-->
+        <scene sceneID="ank-v2-QIQ">
+            <objects>
+                <viewController id="Bs0-hD-3wJ" customClass="PanZoomViewController" customModule="CS6475FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A9H-zv-ezC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HRW-3o-pZH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="afT-CC-uXX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tBc-4Y-caG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HRW-3o-pZH" firstAttribute="top" secondItem="tBc-4Y-caG" secondAttribute="bottom" id="6GZ-SH-RLP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tBc-4Y-caG" secondAttribute="trailing" constant="-20" id="JMn-Pu-OQS"/>
+                            <constraint firstItem="tBc-4Y-caG" firstAttribute="leading" secondItem="afT-CC-uXX" secondAttribute="leadingMargin" constant="-20" id="bRm-7B-Jsz"/>
+                            <constraint firstItem="tBc-4Y-caG" firstAttribute="top" secondItem="A9H-zv-ezC" secondAttribute="bottom" id="cGf-C5-HVG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Panning &amp; Zooming" id="DOS-zV-chf">
+                        <barButtonItem key="leftBarButtonItem" title="Move" id="Dr0-UI-9mS">
+                            <connections>
+                                <action selector="movePic:" destination="Bs0-hD-3wJ" id="nlu-sS-M0x"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Zoom" id="SJU-6M-CGF">
+                            <connections>
+                                <action selector="zoomPic:" destination="Bs0-hD-3wJ" id="MLK-lO-9X4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="tBc-4Y-caG" id="XdU-Zv-Bw5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ud0-q8-Fos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4136" y="331"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NhT-al-p4c">
             <objects>
@@ -124,5 +168,26 @@
             </objects>
             <point key="canvasLocation" x="1809" y="345"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Ql-ho-dXy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="btt-2S-KDF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JST-lp-vlr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bs0-hD-3wJ" kind="relationship" relationship="rootViewController" id="87L-5S-Ayb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9j-NU-CiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3324" y="331"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="image3.jpg" width="3008" height="2000"/>
+    </resources>
 </document>

@@ -19,6 +19,8 @@
  3. Image to byte array/matrix:
  http://stackoverflow.com/questions/29734059/convert-uiimage-to-byte-array-in-swift
  
+ 4. Image translation/moving using opencv2
+ http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
  
  
  
