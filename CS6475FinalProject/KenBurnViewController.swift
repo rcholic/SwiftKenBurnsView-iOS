@@ -18,7 +18,9 @@ class KenBurnViewController: UIViewController {
         gwKBenViewContainer.curImage = UIImage(named: "image3.jpg") // change the image here!
         let image1 = UIImage(named: "image2.jpg")
         let image2 = UIImage(named: "image3.jpg")
-        gwKBenViewContainer.imagesArr = [image1, image2]
+        let imagesArr: [UIImage?] = [image1, image2]
+        gwKBenViewContainer.imagesArr = imagesArr
+        gwKBenViewContainer.curImage = imagesArr.first!
     }
     
     @IBAction func toggleAnimation(sender: AnyObject) {

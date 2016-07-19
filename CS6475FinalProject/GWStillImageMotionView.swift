@@ -104,11 +104,13 @@ import GPUImage
     }
     
     @objc private func nextImageView(sender: AnyObject?) {
+        self.curImageIndex += 1
         guard let img = imagesArr[curImageIndex % imagesArr.count] else { return }
+        
         self.curImage = img
         performAnimation(0)
-        print("animation return for curImageIndex: \(curImageIndex)")
-        curImageIndex += 1 // increment
+        // print("animation return for curImageIndex: \(curImageIndex)")
+        
     }
     
     func stopAnimation() {
@@ -183,17 +185,6 @@ import GPUImage
         let finishXForm = possibleFinishes[Int(arc4random_uniform(UInt32(possibleFinishes.count)))]
         
         imageView.transform = startXForm
-        /*
-        UIView.animateWithDuration(3.0, animations: {
-            self.imageView.transform = finishXForm
-            }) { _ in
-                
-                print("finished animation for point index: \(pointIndex)")
-                if pointIndex < self.pointsTapped.count-1 {
-                    self.performAnimation(pointIndex+1)
-                }
-        }
-        */
         
         UIView.animateWithDuration(4, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             self.imageView.transform = finishXForm
@@ -203,7 +194,8 @@ import GPUImage
                 if pointIndex < self.pointsTapped.count-1 {
                     self.performAnimation(pointIndex+1)
                 } else {
-                    print("animation done with current image for all points")
+                    
+                    self.nextImageView(nil)
                 }
         }
         
