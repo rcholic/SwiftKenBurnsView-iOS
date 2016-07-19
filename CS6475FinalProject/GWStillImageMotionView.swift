@@ -36,6 +36,7 @@ import GPUImage
             }
             
             imageView = UIImageView()
+            imageView.contentMode = .ScaleToFill
             imageView.image = curImage
             contentView.addSubview(imageView)
             

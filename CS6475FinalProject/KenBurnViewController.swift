@@ -61,6 +61,7 @@ class KenBurnViewController: UIViewController {
         presentViewController(addImageController, animated: true, completion: nil)
     }
 //http://wallpapercave.com/wp/8Ustxyg.jpg
+    // http://xy7millions.com/wp-content/uploads/2014/02/15-outer-space-wallpaper.jpg
     func fetchImageNow(imageUrl: String?) {
         print("imageUrl: \(imageUrl)")
         guard imageUrl != nil else { return }
