@@ -25,6 +25,7 @@ import GPUImage
     var imagesArr: [UIImage?] = []
     var curImageIndex = 0 // index in the imagesArr
     var timer = NSTimer()
+    let signNumbers = [1, -1] // for controlling negative or positive numbers randomly
     
     var curImage: UIImage? {
         didSet {
@@ -131,8 +132,12 @@ import GPUImage
 //            performAnimation(0)
 //        }
         if isAnimationRunning {
-            print("starting animation now")
-            timer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: #selector(self.nextImageView(_:)), userInfo: nil, repeats: true)
+//            print("starting animation now")
+//            timer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: #selector(self.nextImageView(_:)), userInfo: nil, repeats: true)
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue(), { 
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: #selector(self.nextImageView(_:)), userInfo: nil, repeats: true)
+            })
             
 //            performAnimation(0)
         } else {
@@ -153,20 +158,31 @@ import GPUImage
 
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
-        var moveX = -maxMoveXY.maxMoveX // curPoint.x - lastPoint.x
+        var moveX = curPoint.x - lastPoint.x
         let isXNegative = moveX.isNegative()
         moveX = abs(moveX) > maxMoveXY.maxMoveX ? maxMoveXY.maxMoveX : moveX  // prevent image overfloat
         
+        var randIndex = Int(arc4random_uniform(UInt32(signNumbers.count)))
+        var signNum = CGFloat(signNumbers[randIndex])
+        moveX = moveX * signNum
+        /*
         if isXNegative && !moveX.isNegative() {
             moveX = -moveX
         }
+        */
         
-        var moveY = -maxMoveXY.maxMoveY // curPoint.y - lastPoint.y
+        var moveY = curPoint.y - lastPoint.y
         let isYnegative = moveY.isNegative()
         moveY = abs(moveY) > maxMoveXY.maxMoveY ? maxMoveXY.maxMoveY : moveY // prevent image overfloat
+        
+        randIndex = Int(arc4random_uniform(UInt32(signNumbers.count)))
+        signNum = CGFloat(signNumbers[randIndex])
+        moveY = moveY * signNum
+        /*
         if isYnegative && !moveY.isNegative() {
             moveY = -moveY
         }
+        */
         print("moveX: \(moveX),moveY: \(moveY); maxMoveX: \(maxMoveXY.maxMoveX), maxMoveY: \(maxMoveXY.maxMoveY)")
         
         // transformations:
@@ -176,13 +192,12 @@ import GPUImage
         let zoomIn = CGAffineTransformMakeScale(zoomInX, zoomInY)
         let allTransform = CGAffineTransformConcat(zoomIn, rotateMove)
         
-        let zoomedTransform = allTransform
         let standardXForm = CGAffineTransformIdentity
-        let startXForm = CGAffineTransformIdentity
-        // let finishXForm = CGAffineTransformIdentity
-        
-        let possibleFinishes: [CGAffineTransform] = [zoomIn, allTransform] // zoomIn, rotateMove, allTransform
-        let finishXForm = possibleFinishes[Int(arc4random_uniform(UInt32(possibleFinishes.count)))]
+        let possibleTransforms: [(start: CGAffineTransform, end: CGAffineTransform)] = [(start: standardXForm, end: zoomIn), (start: zoomIn, end: standardXForm), (start: standardXForm, end: rotateMove), (start: standardXForm, end: allTransform)]
+        let transformIndex = Int(arc4random_uniform(UInt32(possibleTransforms.count)))
+        print("transformIndex: \(transformIndex)")
+        let finishXForm = possibleTransforms[transformIndex].end
+        let startXForm = possibleTransforms[transformIndex].start
         
         imageView.transform = startXForm
         
@@ -190,14 +205,15 @@ import GPUImage
             self.imageView.transform = finishXForm
             }) { _ in
                 
-                print("finished animation for point index: \(pointIndex)")
+//                print("finished animation for point index: \(pointIndex)")
                 if pointIndex < self.pointsTapped.count-1 {
-                    self.performAnimation(pointIndex+1)
+//                    self.performAnimation(pointIndex+1)
                 } else {
                     
-                    self.nextImageView(nil)
+                    // self.nextImageView(nil)
                 }
         }
+        print("after transform for this image")
         
     } // performAnimation
     
