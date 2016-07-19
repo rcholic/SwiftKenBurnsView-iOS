@@ -91,6 +91,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ken Burns Effect" id="xOT-Vv-DQu">
+                        <barButtonItem key="leftBarButtonItem" title="Add Image" id="iaH-fK-qbg">
+                            <connections>
+                                <action selector="addImageFromUrl:" destination="87L-kf-Tgd" id="SEO-Hn-7vs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="0H4-1G-4JS">
                             <connections>
                                 <action selector="toggleAnimation:" destination="87L-kf-Tgd" id="veb-Ej-GjA"/>
@@ -98,6 +103,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addImageBtn" destination="iaH-fK-qbg" id="myE-YU-etz"/>
                         <outlet property="controlButton" destination="0H4-1G-4JS" id="231-eZ-Gri"/>
                         <outlet property="gwKBenViewContainer" destination="qUQ-Ed-xMI" id="Ls4-3Q-0Km"/>
                     </connections>

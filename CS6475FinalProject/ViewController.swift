@@ -10,6 +10,7 @@ import UIKit
 
 import GPUImage
 import Surge
+import Kingfisher
 
 typealias imageInfoObject = (pixels: [UInt8]?, width: Int, height: Int)
 
