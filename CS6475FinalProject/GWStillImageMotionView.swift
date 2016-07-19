@@ -20,7 +20,7 @@ import GPUImage
     var imageArray: [UIImage] = []
     var pointsTapped: [CGPoint] = []
     var isAnimationRunning: Bool = false
-    let resizeFactor: CGFloat = 1.2 // make the loaded image bigger than its original size for scanning effect
+    let resizeFactor: CGFloat = 1.3 // make the loaded image bigger than its original size for scanning effect
     
     var imagesArr: [UIImage?] = []
     var curImageIndex = 0 // index in the imagesArr
@@ -154,8 +154,8 @@ import GPUImage
         let maxMoveXY = getImageAndMoveInfo()
         
         let rotationAngle = (arc4random() % 9) / 100
-        let zoomInX: CGFloat = 1.50
-        let zoomInY: CGFloat = 1.50
+        let zoomInX: CGFloat = 1.35
+        let zoomInY: CGFloat = 1.35
 
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
