@@ -19,7 +19,7 @@ import UIKit
     var imageArray: [UIImage] = []
     var pointsTapped: [CGPoint] = []
     var isAnimationRunning: Bool = false
-    let resizeFactor: CGFloat = 1.3 // make the loaded image bigger than its original size for scanning effect
+    let resizeFactor: CGFloat = 1.5 // make the loaded image bigger than its original size for scanning effect
     
     var imagesArr: [UIImage?] = []
     var curImageIndex = 0 // index in the imagesArr
@@ -76,7 +76,7 @@ import UIKit
         let nib = UINib(nibName: String(self.dynamicType), bundle: bundle)
       //  NSBundle.mainBundle().loadNibNamed(String(self.dynamicType), owner: self, options: nil)
         contentView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        contentView.backgroundColor = UIColor.redColor()
+        contentView.backgroundColor = UIColor.clearColor()
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         
@@ -153,8 +153,8 @@ import UIKit
         let maxMoveXY = getImageAndMoveInfo()
         
         let rotationAngle = (arc4random() % 9) / 100
-        let zoomInX: CGFloat = 1.35
-        let zoomInY: CGFloat = 1.35
+        let zoomInX: CGFloat = 1.60
+        let zoomInY: CGFloat = 1.60
 
         let curPoint = pointsTapped[pointIndex]
         let lastPoint: CGPoint = pointIndex == 0 ? CGPointZero : pointsTapped[pointIndex-1]
@@ -164,7 +164,7 @@ import UIKit
         
         var randIndex = Int(arc4random_uniform(UInt32(signNumbers.count)))
         var signNum = CGFloat(signNumbers[randIndex])
-        moveX = moveX * signNum
+        moveX = moveX/4 * signNum
         /*
         if isXNegative && !moveX.isNegative() {
             moveX = -moveX
@@ -177,7 +177,7 @@ import UIKit
         
         randIndex = Int(arc4random_uniform(UInt32(signNumbers.count)))
         signNum = CGFloat(signNumbers[randIndex])
-        moveY = moveY * signNum
+        moveY = moveY/4 * signNum
         /*
         if isYnegative && !moveY.isNegative() {
             moveY = -moveY

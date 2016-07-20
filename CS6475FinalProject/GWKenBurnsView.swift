@@ -32,8 +32,6 @@
 
 import Foundation
 import UIKit
-import Surge
-import GPUImage
 
 public enum MotionMode {
     case UserInteraction
@@ -59,8 +57,4 @@ public class GWKenBurnsView: GWKenBurnsViewProtocol {
         self.motionMode = motionMode
         self.duration = duration
     }
-    
-    
-    
-    
 }
