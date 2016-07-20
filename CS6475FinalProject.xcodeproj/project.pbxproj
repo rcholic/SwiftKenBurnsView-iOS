@@ -22,7 +22,7 @@
 		EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */; };
 		EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */; };
 		EB6869A51D35D7CA008B6DA7 /* GWStillImageMotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */; };
-		EB693BDC1D3EFCAF00135E74 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB693BDB1D3EFCAF00135E74 /* image1.jpg */; };
+		EB693BE01D3F008200135E74 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB693BDF1D3F008200135E74 /* image1.jpg */; };
 		EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */; };
 		EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBEF1D347BD20000C6BC /* ViewController.swift */; };
 		EB6BDBF31D347BD30000C6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6BDBF11D347BD30000C6BC /* Main.storyboard */; };
@@ -78,7 +78,7 @@
 		EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWStillImageMotionView.swift; sourceTree = "<group>"; };
 		EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GWStillImageMotionView.xib; sourceTree = "<group>"; };
 		EB6869A81D35E029008B6DA7 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = "../../../../../../Users/guoliangwang/Library/Developer/Xcode/DerivedData/CS6475FinalProject-aenwplnqbetskcgysojbcgxnlfbq/Build/Products/Debug-iphonesimulator/Neon.framework"; sourceTree = "<group>"; };
-		EB693BDB1D3EFCAF00135E74 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		EB693BDF1D3F008200135E74 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		EB6BDBEA1D347BD20000C6BC /* CS6475FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS6475FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6BDBEF1D347BD20000C6BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		EB6869961D35D236008B6DA7 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				EB693BDB1D3EFCAF00135E74 /* image1.jpg */,
+				EB693BDF1D3F008200135E74 /* image1.jpg */,
 				EB68699B1D35D255008B6DA7 /* image2.jpg */,
 				EB68699D1D35D25E008B6DA7 /* image3.jpg */,
 			);
@@ -372,7 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB693BDC1D3EFCAF00135E74 /* image1.jpg in Resources */,
+				EB693BE01D3F008200135E74 /* image1.jpg in Resources */,
 				EB6BDBF81D347BD30000C6BC /* LaunchScreen.storyboard in Resources */,
 				EB68699E1D35D25E008B6DA7 /* image3.jpg in Resources */,
 				EB6BDBF51D347BD30000C6BC /* Assets.xcassets in Resources */,
