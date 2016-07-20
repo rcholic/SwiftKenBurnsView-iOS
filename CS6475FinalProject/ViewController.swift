@@ -8,8 +8,8 @@
 
 import UIKit
 
-import GPUImage
-import Surge
+//import GPUImage
+//import Surge
 import Kingfisher
 
 typealias imageInfoObject = (pixels: [UInt8]?, width: Int, height: Int)
@@ -28,7 +28,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.modalPresentationStyle = UIModalPresentationStyle.FullScreen
         
         setupUI()
-        compute()
     }
     
     @IBAction func chooseImage(sender: AnyObject) {
@@ -93,25 +92,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         CGContextDrawImage(contextRef, CGRectMake(0.0, 0.0, CGFloat(width), CGFloat(height)), imageRef)
         
         return imageInfoObject(pixels: pixelValues, width: width, height: height)
-    }
-    
-    
-    
-    func compute() {
-        let m1 = Surge.Matrix([
-            [1.0, 2.0, 3.0],
-            [3.0, 0.0, 5.0],
-            [3.0, 2.5, 8.0],
-            ])
-        
-        let m2 = Surge.Matrix([
-            [1.0, 2.0, 3.0],
-            [3.0, 0.0, 5.0],
-            [3.0, 2.5, 8.0],
-            ])
-        
-        let product = Surge.mul(m1, y: m2)
-        print("product of matrices: \(product)")
     }
 }
 

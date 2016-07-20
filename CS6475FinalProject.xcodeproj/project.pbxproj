@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		751517871D355DA100963999 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515177B1D355D9000963999 /* GPUImage.framework */; };
-		751517881D355DA500963999 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751517841D355D9A00963999 /* Surge.framework */; };
 		751517941D355FE200963999 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 751517931D355FE200963999 /* CVWrapper.mm */; };
 		751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 751517961D35607E00963999 /* UIImage+OpenCV.mm */; };
 		7515179B1D3560EB00963999 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7515179A1D3560EB00963999 /* UIImage+Rotate.m */; };
 		7515179D1D35614C00963999 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7515179C1D35614C00963999 /* opencv2.framework */; };
 		751517A61D35620A00963999 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 751517A41D35620A00963999 /* stitching.cpp */; };
 		D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */; };
-		EB27AFCB1D387E0000B39424 /* Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB27AFC61D387DE800B39424 /* Toucan.framework */; };
-		EB27AFCD1D387EA000B39424 /* PanZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */; };
 		EB5E47201D36FE7C00D92E23 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */; };
 		EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47251D36FE8500D92E23 /* CoreVideo.framework */; };
 		EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */; };
@@ -26,6 +22,7 @@
 		EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */; };
 		EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */; };
 		EB6869A51D35D7CA008B6DA7 /* GWStillImageMotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */; };
+		EB693BDC1D3EFCAF00135E74 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB693BDB1D3EFCAF00135E74 /* image1.jpg */; };
 		EB6BDBEE1D347BD20000C6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */; };
 		EB6BDBF01D347BD20000C6BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDBEF1D347BD20000C6BC /* ViewController.swift */; };
 		EB6BDBF31D347BD30000C6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6BDBF11D347BD30000C6BC /* Main.storyboard */; };
@@ -40,55 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7515177A1D355D9000963999 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCD1B1251C66A262001F2BDC;
-			remoteInfo = GPUImage;
-		};
-		7515177C1D355D9000963999 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCD1B12F1C66A262001F2BDC;
-			remoteInfo = GPUImageTests;
-		};
-		751517831D355D9A00963999 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7515177E1D355D9A00963999 /* Surge.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8A1E1AA19917A79009735E2;
-			remoteInfo = Surge;
-		};
-		751517851D355D9A00963999 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7515177E1D355D9A00963999 /* Surge.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
-			remoteInfo = SurgeTests;
-		};
-		EB27AFC51D387DE800B39424 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 740AC3EA1999799900AB9A86;
-			remoteInfo = Toucan;
-		};
-		EB27AFC71D387DE800B39424 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D770E41C2BF2C800B15C64;
-			remoteInfo = Toucan.tvOS;
-		};
-		EB27AFC91D387DE800B39424 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 740AC3F51999799900AB9A86;
-			remoteInfo = ToucanTests;
-		};
 		EB6BDBFF1D347BD30000C6BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EB6BDBE21D347BD20000C6BC /* Project object */;
@@ -106,8 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "external/GPUImage2/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
-		7515177E1D355D9A00963999 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = external/Surge/Surge.xcodeproj; sourceTree = "<group>"; };
 		751517921D355FE200963999 /* CS6475FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS6475FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		751517931D355FE200963999 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
 		751517951D35602F00963999 /* CVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
@@ -122,8 +68,6 @@
 		751517A71D35649000963999 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7817FBAC3611D45F25DCA1BA /* Pods_CS6475FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CS6475FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88B47A3A65D30FA405C31D8 /* Pods-CS6475FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CS6475FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CS6475FinalProject/Pods-CS6475FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
-		EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = external/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
-		EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanZoomViewController.swift; sourceTree = "<group>"; };
 		EB5E471F1D36FE7C00D92E23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		EB5E47251D36FE8500D92E23 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		EB5E47271D36FE8F00D92E23 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -134,6 +78,7 @@
 		EB6869A21D35D7B1008B6DA7 /* GWStillImageMotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GWStillImageMotionView.swift; sourceTree = "<group>"; };
 		EB6869A41D35D7CA008B6DA7 /* GWStillImageMotionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GWStillImageMotionView.xib; sourceTree = "<group>"; };
 		EB6869A81D35E029008B6DA7 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = "../../../../../../Users/guoliangwang/Library/Developer/Xcode/DerivedData/CS6475FinalProject-aenwplnqbetskcgysojbcgxnlfbq/Build/Products/Debug-iphonesimulator/Neon.framework"; sourceTree = "<group>"; };
+		EB693BDB1D3EFCAF00135E74 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		EB6BDBEA1D347BD20000C6BC /* CS6475FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS6475FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6BDBED1D347BD20000C6BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6BDBEF1D347BD20000C6BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,14 +105,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB764D621D3BFBEC003ABB83 /* Kingfisher.framework in Frameworks */,
-				EB27AFCB1D387E0000B39424 /* Toucan.framework in Frameworks */,
 				EB5E472A1D36FE9800D92E23 /* QuartzCore.framework in Frameworks */,
 				EB5E47281D36FE8F00D92E23 /* OpenGLES.framework in Frameworks */,
 				EB5E47261D36FE8500D92E23 /* CoreVideo.framework in Frameworks */,
 				EB5E47201D36FE7C00D92E23 /* CoreMedia.framework in Frameworks */,
 				7515179D1D35614C00963999 /* opencv2.framework in Frameworks */,
-				751517881D355DA500963999 /* Surge.framework in Frameworks */,
-				751517871D355DA100963999 /* GPUImage.framework in Frameworks */,
 				EB6BDC2A1D347D080000C6BC /* AVKit.framework in Frameworks */,
 				EB6BDC281D347D030000C6BC /* AVFoundation.framework in Frameworks */,
 				D7994C2C7BE623E75E6B9077 /* Pods_CS6475FinalProject.framework in Frameworks */,
@@ -191,24 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		751517761D355D9000963999 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7515177B1D355D9000963999 /* GPUImage.framework */,
-				7515177D1D355D9000963999 /* GPUImageTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7515177F1D355D9A00963999 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				751517841D355D9A00963999 /* Surge.framework */,
-				751517861D355D9A00963999 /* SurgeTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7515178D1D355FB700963999 /* OpenCVWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,19 +173,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		EB27AFBC1D387DE800B39424 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EB27AFC61D387DE800B39424 /* Toucan.framework */,
-				EB27AFC81D387DE800B39424 /* Toucan.framework */,
-				EB27AFCA1D387DE800B39424 /* ToucanTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		EB6869961D35D236008B6DA7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EB693BDB1D3EFCAF00135E74 /* image1.jpg */,
 				EB68699B1D35D255008B6DA7 /* image2.jpg */,
 				EB68699D1D35D25E008B6DA7 /* image3.jpg */,
 			);
@@ -284,10 +199,7 @@
 				EB6BDC011D347BD30000C6BC /* CS6475FinalProjectTests */,
 				EB6BDC0C1D347BD30000C6BC /* CS6475FinalProjectUITests */,
 				EB6BDBEB1D347BD20000C6BC /* Products */,
-				EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */,
 				7515179C1D35614C00963999 /* opencv2.framework */,
-				751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */,
-				7515177E1D355D9A00963999 /* Surge.xcodeproj */,
 				EB6BDC271D347D030000C6BC /* AVFoundation.framework */,
 				EB6BDC291D347D080000C6BC /* AVKit.framework */,
 				DA90F9EF528D9F39DDDE1D23 /* Pods */,
@@ -320,7 +232,6 @@
 				EB6BDBF61D347BD30000C6BC /* LaunchScreen.storyboard */,
 				EB6BDBF91D347BD30000C6BC /* Info.plist */,
 				EB68699F1D35D292008B6DA7 /* KenBurnViewController.swift */,
-				EB27AFCC1D387EA000B39424 /* PanZoomViewController.swift */,
 			);
 			path = CS6475FinalProject;
 			sourceTree = "<group>";
@@ -447,20 +358,6 @@
 			mainGroup = EB6BDBE11D347BD20000C6BC;
 			productRefGroup = EB6BDBEB1D347BD20000C6BC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 751517761D355D9000963999 /* Products */;
-					ProjectRef = 751517751D355D9000963999 /* GPUImage-iOS.xcodeproj */;
-				},
-				{
-					ProductGroup = 7515177F1D355D9A00963999 /* Products */;
-					ProjectRef = 7515177E1D355D9A00963999 /* Surge.xcodeproj */;
-				},
-				{
-					ProductGroup = EB27AFBC1D387DE800B39424 /* Products */;
-					ProjectRef = EB27AFBB1D387DE800B39424 /* Toucan.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EB6BDBE91D347BD20000C6BC /* CS6475FinalProject */,
@@ -470,63 +367,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		7515177B1D355D9000963999 /* GPUImage.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GPUImage.framework;
-			remoteRef = 7515177A1D355D9000963999 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7515177D1D355D9000963999 /* GPUImageTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.xctest;
-			remoteRef = 7515177C1D355D9000963999 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		751517841D355D9A00963999 /* Surge.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Surge.framework;
-			remoteRef = 751517831D355D9A00963999 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		751517861D355D9A00963999 /* SurgeTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SurgeTests.xctest;
-			remoteRef = 751517851D355D9A00963999 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EB27AFC61D387DE800B39424 /* Toucan.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Toucan.framework;
-			remoteRef = EB27AFC51D387DE800B39424 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EB27AFC81D387DE800B39424 /* Toucan.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Toucan.framework;
-			remoteRef = EB27AFC71D387DE800B39424 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EB27AFCA1D387DE800B39424 /* ToucanTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ToucanTests.xctest;
-			remoteRef = EB27AFC91D387DE800B39424 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		EB6BDBE81D347BD20000C6BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB693BDC1D3EFCAF00135E74 /* image1.jpg in Resources */,
 				EB6BDBF81D347BD30000C6BC /* LaunchScreen.storyboard in Resources */,
 				EB68699E1D35D25E008B6DA7 /* image3.jpg in Resources */,
 				EB6BDBF51D347BD30000C6BC /* Assets.xcassets in Resources */,
@@ -606,7 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				751517941D355FE200963999 /* CVWrapper.mm in Sources */,
-				EB27AFCD1D387EA000B39424 /* PanZoomViewController.swift in Sources */,
 				EB6869A31D35D7B1008B6DA7 /* GWStillImageMotionView.swift in Sources */,
 				751517971D35607E00963999 /* UIImage+OpenCV.mm in Sources */,
 				EB6869A01D35D292008B6DA7 /* KenBurnViewController.swift in Sources */,

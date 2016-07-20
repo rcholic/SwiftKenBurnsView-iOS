@@ -43,9 +43,10 @@ class KenBurnViewController: UIViewController {
         
         
         gwKBenViewContainer.curImage = UIImage(named: "image3.jpg") // change the image here!
-        let image1 = UIImage(named: "image2.jpg")
-        let image2 = UIImage(named: "image3.jpg")
-        let imagesArr: [UIImage?] = [image1, image2]
+        let image1 = UIImage(named: "image1.jpg")
+        let image2 = UIImage(named: "image2.jpg")
+        let image3 = UIImage(named: "image3.jpg")
+        let imagesArr: [UIImage?] = [image1, image2, image3]
         gwKBenViewContainer.imagesArr = imagesArr
         gwKBenViewContainer.curImage = imagesArr.first!
         
