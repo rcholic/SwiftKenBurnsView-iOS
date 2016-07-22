@@ -239,7 +239,6 @@ import UIKit
         let resizeRatio = widthRatio > heightRatio ? widthRatio : heightRatio
         let width = curImage!.size.width * resizeRatio * resizeFactor
         let height = curImage!.size.height * resizeRatio * resizeFactor
-        // imageView.frame = CGRectMake(<#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
         
         let maxMoveX: CGFloat = width - frameWid
         let maxMoveY: CGFloat = height - frameHgt
